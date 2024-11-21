@@ -25,3 +25,8 @@ target_link_libraries(transactions_transfer_with_binary_objects
 add_executable(ledger_with_csv_encoding ledger_with_csv_encoding.cpp)
 target_link_libraries(ledger_with_csv_encoding
     PRIVATE couchbase_cxx_client::couchbase_cxx_client taocpp::json fmt::fmt)
+
+add_executable(transactions_transfer_benchmark transactions_benchmark.cpp)
+target_link_libraries(transactions_transfer_benchmark
+    PRIVATE couchbase_cxx_client::couchbase_cxx_client taocpp::json fmt::fmt)
+
